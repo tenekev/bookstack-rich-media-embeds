@@ -1,0 +1,93 @@
+/* Read mode styling */
+
+.rich-embed {
+  display: block;
+  max-height: 250px;
+  margin: 2rem 1rem;
+  transition: height .2s ease-in-out;
+}
+
+#rich-embed-loading {
+  height: 64px;
+  width: 64px;
+  box-shadow: none;
+}
+
+.rich-embed:not(:has(*)){
+  outline: 3px dotted var(--color-primary);
+  border-radius: .5rem;
+  height: 2rem;
+}
+
+.rich-embed:has(#rich-embed-loading){
+  outline: 3px dotted var(--color-primary);
+  border-radius: .5rem;
+  text-align: center;
+  padding: .5rem;
+}
+
+.rich-embed img {
+  box-shadow: 0 4px 10px #d2d2d2, 0 4px 25px #ddd;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  position: relative;
+  z-index: 4;
+  transition: transform .1s ease-in-out, box-shadow .2s ease-out;
+}
+.rich-embed:hover img {
+  transform: translate(-2px, -6px) scale(1.03);
+  box-shadow: 0 10px 25px #a3a3a3;
+}
+
+.rich-embed img.rich-embed-gh {
+  max-height: inherit;
+}
+
+/* Styling of the temp card */
+
+.temp-card-container {
+  background: white;
+  position: absolute;
+  bottom: 0px;
+  /*z-index: 10;
+  border: 1px solid #000;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  width: 900px;
+  height: 200px;
+}
+.temp-card-container img {
+  max-height: calc(200px - 2* 1rem);
+  border-radius: .5rem;
+  background: var(--color-primary-light);
+  max-width: 300px;
+  align-self: center;
+  justify-self: center;
+}
+.temp-card-container div {
+  grid-column: 2 / 5;
+  overflow: hidden;
+  position: relative;
+}
+.temp-card-container div h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(68, 68, 68);
+}
+.temp-card-container div p {
+  font-size: 1.1rem;
+  color: rgb(68, 68, 68);
+  margin: 0;
+  overflow: hidden;
+  max-height: 5.4rem;
+}
+.temp-card-container div span {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  width: 100%;
+  padding-top: 2rem;
+}
