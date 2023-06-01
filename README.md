@@ -1,6 +1,6 @@
 # Rich Media Embeds Addon for Bookstack
 
-[The full explanation and examples can be found here](https://tenekev.art/posts/introducing-rich-media-embeds-addon-for-bookstack/)
+[The full explanation and more examples can be found here](https://tenekev.art/posts/introducing-rich-media-embeds-addon-for-bookstack/)
 
 ## 📦 How to install Rich Media Embeds addon
 
@@ -31,7 +31,7 @@ It's tempting to put both containers on the same docker network and try to use `
 Bookstack conveniently allows for the injection of custom code in the `<head>` element of the site. **Settings &gt; Customization &gt; Custom HTML Head Content**.
 
 **The simplest approach** is to just copy the contents of addon-rich-media-embeds.js, html2canvas.min.js and styles.css in respective `<script>` and `<style>` tags. 
-[Here is code.](head-simple.html)
+[Here is the code.](head-simple.html)
 However, it introduces a lot of lines of code that is hard to manage.
 
 **The better approach** is to link these files from your filesystem. Here is how to place them in Bookstack's `/config/www/uploads/` directory. This will serve them with the rest of Bookstack's files.
