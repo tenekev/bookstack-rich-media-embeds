@@ -2,11 +2,11 @@
 
 [The full explanation and examples can be found here](https://tenekev.art/posts/introducing-rich-media-embeds-addon-for-bookstack/)
 
-#### 📦 How to install Rich Media Embeds addon
+## 📦 How to install Rich Media Embeds addon
 
 RME is designed to run entirely client-side but this comes with its limitations. [If you want to understand why, read the article](https://tenekev.art/posts/introducing-rich-media-embeds-addon-for-bookstack/). The setup process is two-part.
 
-##### 1. Setting up[ CORS-Anywhere](https://github.com/Rob--W/cors-anywhere) service:
+### 1. Setting up[ CORS-Anywhere](https://github.com/Rob--W/cors-anywhere) service:
 
 CORS-A is a lightweight service that even has public instances. It's advised to set up your own without the limitations or risks of public ones. My Bookstack is containerized, thus I'm showing a containerized version of CORS-A too. We will be using [this well-known image](https://hub.docker.com/r/testcab/cors-anywhere) of CORS-A in a snipped of a docker-compose file.
 
@@ -26,7 +26,7 @@ It's tempting to put both containers on the same docker network and try to use `
 
 ⚠️ If your Bookstack instance is running on HTTPS, so must CORS-A. Your browser won't allow you to serve insecure HTTP requests on a secured HTTPS page!
 
-##### 2. Injecting RME addon into Bookstack
+### 2. Injecting RME addon into Bookstack
 
 Bookstack conveniently allows for the injection of custom code in the `<head>` element of the site. **Settings &gt; Customization &gt; Custom HTML Head Content**.
 
@@ -76,14 +76,14 @@ Once you open the editor, you should see this in your toolbar:
 
 [![image.png](images/image.png)](images/image.png)You are ready to start posting links for beautiful embeds.
 
-#### ⛓️ Dependencies
+## ⛓️ Dependencies
 
 - Bookstack (obviously)
 - [TinyMCE](https://www.tiny.cloud/) - The Bookstack WYSIWYG editor
 - [CORS-Anywhere Docker image by testcab](https://github.com/testcab/docker-cors-anywhere)
 - [html2canvas project by niklasvh](https://github.com/niklasvh/html2canvas)
 
-### Examples of RME cards from different sites
+## Examples of RME cards from different sites
 
 Notes in **BOLD** with *Lorem ipsum* as filler.
 
